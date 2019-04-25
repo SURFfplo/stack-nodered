@@ -5,7 +5,7 @@
 echo -e "${yellow}
 # Create config for mysql container 
 #############################################################################${nc}"
-docker config create nodered_conf config/settings.js
+docker config create nodered_conf conf/settings.js
 echo -e "${green}Done....${nc}"
 
 
