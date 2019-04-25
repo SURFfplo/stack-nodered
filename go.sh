@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export STACK_NETWORK=dev-net
-export STACK_SERVICE=nodered
+export STACK_SERVICE=noderededu
 export STACK_VERSION=0.1
 
 # prepare
