@@ -1,0 +1,26 @@
+version: '3.7'
+
+networks: 
+  dev-net:
+    external: true
+
+services:
+  nodered:
+    #image: nodered
+    image: 192.87.106.18:56001/nodered:0.1
+    deploy:
+      replicas: 1
+    networks:
+      - dev-net
+    ports:
+      - "1880:1880"
+    configs:
+      - source: nodered_conf
+        target: /data/settings.js
+#        uid: node-red
+#        gid: node-red
+configs:
+  nodered_conf:
+    external: true
+
+
