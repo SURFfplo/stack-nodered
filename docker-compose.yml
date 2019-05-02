@@ -12,6 +12,9 @@ services:
       replicas: 1
     networks:
       - dev-net
+    volumes:
+      #- $PWD/data:/data
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/nodered-0.1/data:/data
     ports:
       - "57199:1880"
     configs:
@@ -19,8 +22,7 @@ services:
         target: /data/settings.js
 #        uid: node-red
 #        gid: node-red
+
 configs:
   nodered_conf:
     external: true
-
-
