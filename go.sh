@@ -17,7 +17,7 @@ if [ "$3" != "" ]; then
 	NETWORK=$3
 fi
 if [ "$4" != "" ]; then
-	PORT=$3
+	PORT=$4
 fi
 
 # reuse input
