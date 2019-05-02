@@ -3,6 +3,10 @@ version: '3.7'
 networks: 
   dev-net:
     external: true
+  demo-net:
+    external: true
+  pilot-net:
+    external: true
 
 services:
   nodered:
@@ -11,12 +15,12 @@ services:
     deploy:
       replicas: 1
     networks:
-      - dev-net
+      - $STACK_NETWORK
     volumes:
       #- $PWD/data:/data
-      - /mnt/nfs/nfsdlo/$STACK_NETWORK/noderededu-0.1/data:/data
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/$STACK_SERVICE/$STACK_VERSION/data:/data
     ports:
-      - "57199:1880"
+      - $STACK_PORT:1880
     configs:
       - source: nodered_conf
         target: /data/settings.js
