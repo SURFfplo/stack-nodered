@@ -14,7 +14,7 @@ services:
       - dev-net
     volumes:
       #- $PWD/data:/data
-      - /mnt/nfs/nfsdlo/$STACK_NETWORK/nodered-0.1/data:/data
+      - /mnt/nfs/nfsdlo/$STACK_NETWORK/noderededu-0.1/data:/data
     ports:
       - "57199:1880"
     configs:
