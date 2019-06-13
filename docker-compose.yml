@@ -3,9 +3,9 @@ version: '3.7'
 networks: 
   dev-net:
     external: true
-  demo-net:
+  test-net:
     external: true
-  pilot-net:
+  exp-net:
     external: true
 
 services:

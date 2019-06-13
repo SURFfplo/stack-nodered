@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # defaults
-SERVICE=noderededu
+SERVICE=DEVnoderededu
 VERSION=0.1
 NETWORK=dev-net
 PORT=57199

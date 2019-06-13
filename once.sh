@@ -8,5 +8,3 @@ echo -e "${yellow}
 docker config create nodered_conf conf/settings.js
 echo -e "${green}Done....${nc}"
 
-
-
