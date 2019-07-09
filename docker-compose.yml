@@ -13,7 +13,14 @@ services:
     #image: nodered
     image: 192.87.106.18:56001/nodered:0.1
     deploy:
+      mode: replicated
       replicas: 1
+      resources:
+        limits:
+          cpu: '1.0'
+          memory: 256M
+      restart_policy:
+        condition: any
     networks:
       - $STACK_NETWORK
     volumes:
